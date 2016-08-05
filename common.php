@@ -47,11 +47,11 @@ function get_param($ParamName)
 //adding comment to force Jenkins Build.
   $ParamValue = "";
   if(isset($HTTP_POST_VARS[$ParamName]))
-    $ParamValue = $HTTP_POST_VARS[$ParamName];
-    //$ParamValue = filter_var($HTTP_POST_VARS[$ParamName], FILTER_SANITIZE_STRING);
+//    $ParamValue = $HTTP_POST_VARS[$ParamName];
+    $ParamValue = filter_var($HTTP_POST_VARS[$ParamName], FILTER_SANITIZE_STRING);
   else if(isset($HTTP_GET_VARS[$ParamName]))
-    $ParamValue = $HTTP_GET_VARS[$ParamName];
-    //$ParamValue = filter_var($HTTP_GET_VARS[$ParamName], FILTER_SANITIZE_STRING);
+//    $ParamValue = $HTTP_GET_VARS[$ParamName];
+    $ParamValue = filter_var($HTTP_GET_VARS[$ParamName], FILTER_SANITIZE_STRING);
 
   return $ParamValue;
 }
