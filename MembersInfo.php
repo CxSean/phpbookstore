@@ -12,8 +12,10 @@ include ("./Footer.php");
 session_start();
 
 $sFileName = "MembersInfo.php";
+$awsKeyID = "AKIAIOSFODNN7EXAMPLE";
+$awsAccessKey = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 
-
+//poop
 
 check_security(2);
 
